@@ -1,4 +1,5 @@
 import urllib2
+from bs4 import BeautifulSoup
 
 a = 'https://www.poetryfoundation.org/poems/92195/matilda-gathering-flowers'
 b = 'https://www.poetryfoundation.org/poems/45113/alastor-or-the-spirit-of-solitude'
@@ -7,11 +8,10 @@ d = 'https://www.poetryfoundation.org/poems/45117/the-cloud-56d2247bf4112'
 e = 'https://www.poetryfoundation.org/poems/45121/hellas-chorus'
 
 poems = [a, b, c, d , e]
+html = ""
 
 for item in poems:
     response = urllib2.urlopen(item)
     html += response.read()
-
-print html
 
 response.close
