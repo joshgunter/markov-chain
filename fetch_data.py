@@ -9,6 +9,7 @@ e = 'https://www.poetryfoundation.org/poems/45121/hellas-chorus'
 
 poems = [a, b, c, d , e]
 html = ""
+poem_output = ""
 
 for item in poems:
     response = urllib2.urlopen(item)
