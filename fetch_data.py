@@ -15,3 +15,6 @@ for item in poems:
     html += response.read()
 
 response.close
+
+poem_input = BeautifulSoup(html, 'html.parser')
+poem_output = poem_input.get_text()
